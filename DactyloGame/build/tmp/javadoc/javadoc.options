@@ -1,0 +1,7 @@
+-classpath 'C:\\Users\\yann9\\Cours\\2022\\CPO5\\Projet\\projetcpoo5-im-edikeu\\DactyloGame\\build\\classes\\java\\main;C:\\Users\\yann9\\Cours\\2022\\CPO5\\Projet\\projetcpoo5-im-edikeu\\DactyloGame\\build\\resources\\main;C:\\Users\\yann9\\.gradle\\caches\\modules-2\\files-2.1\\com.google.code.gson\\gson\\2.10\\dd9b193aef96e973d5a11ab13cd17430c2e4306b\\gson-2.10.jar'
+-d 'C:\\Users\\yann9\\Cours\\2022\\CPO5\\Projet\\projetcpoo5-im-edikeu\\DactyloGame\\build\\docs\\javadoc'
+-doctitle 'DactyloGame API'
+-notimestamp 
+-quiet 
+-windowtitle 'DactyloGame API'
+'C:\\Users\\yann9\\Cours\\2022\\CPO5\\Projet\\projetcpoo5-im-edikeu\\DactyloGame\\src\\main\\java\\DactyloGame\\Main.java'

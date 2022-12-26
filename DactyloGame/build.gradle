@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'application'
+
+
+mainClassName = 'DactyloGame.MainApp'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation     'junit:junit:4.13'
+    implementation         'com.google.code.gson:gson:2.10'
+    
+}
+
+javafx {
+    version = "16"
+    modules = [ 'javafx.controls' ]
+}
+
