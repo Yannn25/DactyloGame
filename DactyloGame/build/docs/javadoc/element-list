@@ -1,1 +1,3 @@
-DactyloGame
+module:com.game.dactylogame
+com.game.dactylogame.Modele
+com.game.dactylogame.VueFX
