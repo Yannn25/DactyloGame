@@ -7,7 +7,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -15,7 +17,14 @@ import java.io.IOException;
 public class NormalModeController {
     private Stage stage;
     private Scene scene;
+    @FXML
     private TextField TextF;
+    @FXML
+    private Button StartButton;
+    @FXML
+    private Button HomeButton;
+    @FXML
+    private Text ZoneText;
     private NormalMode game;
     //private Parent parent;
     @FXML
@@ -28,9 +37,20 @@ public class NormalModeController {
     }
 
     private void addOnTextF() {
-       // game.
+       this.game = new NormalMode();
+       game.RemplirTampon();
+       String str = "";
+       for (int i = 0; i < 15; i++) {
+            str += game.getTampon().getAllWords().get(i) + " ";
+       }
+       ZoneText.setText(str);
     }
 
-
+    @FXML
+    private void OnStartButton(ActionEvent e) {
+        addOnTextF();
+        StartButton.setVisible(false);
+        HomeButton.setVisible(false);
+    }
 
 }

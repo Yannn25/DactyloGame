@@ -17,6 +17,10 @@ public abstract class AbstractModeClass {
     private  Timer reg; //(Régularité)
     private Tampon tampon;
 
+    public AbstractModeClass() {
+        this.tampon = new Tampon();
+    }
+
     /**
      *
      * @param str un texte
@@ -63,9 +67,11 @@ public abstract class AbstractModeClass {
     }
 
     public void RemplirTampon() {
+        int i = 0;
         Scanner scanner = new Scanner(getClass().getResourceAsStream("/com/game/dactylogame/ENListeMots.txt"));
-        while (scanner.hasNextLine()) {
+        while (scanner.hasNextLine() && i < 32 ) {
             tampon.getAllWords().add(scanner.nextLine());
+            i++;
         }
         scanner.close();
     }

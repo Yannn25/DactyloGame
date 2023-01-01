@@ -5,74 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80adedc5-d1ea-4fda-9a79-a5ec879a7e0f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/gc.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/nb-cache/DactyloGame-863861218/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/nb-cache/DactyloGame-863861218/project-info.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/nb-cache/subprojects.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/nb-cache/trust/9C6879FBD479CB247432A5F6578010ACB66B17C990E571E640C407BEFC929F9A" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/DactyloGame/Main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/DactyloGame/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/DactyloGame/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/allclasses-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/allpackages-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/element-list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/index-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/index-all.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/member-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/module-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/module-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/package-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/package-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/type-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.8.jar_a33b649e552c51298e5a242c2f0d0e3c/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.8.jar_a33b649e552c51298e5a242c2f0d0e3c/META-INF/maven/org.jacoco/org.jacoco.agent/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.8.jar_a33b649e552c51298e5a242c2f0d0e3c/META-INF/maven/org.jacoco/org.jacoco.agent/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.8.jar_a33b649e552c51298e5a242c2f0d0e3c/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.8.jar_a33b649e552c51298e5a242c2f0d0e3c/jacocoagent.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.8.jar_a33b649e552c51298e5a242c2f0d0e3c/org/jacoco/agent/AgentJar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/javadoc/javadoc.options" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/javadoc/javadoc.options" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DactyloGame/GameMode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DactyloGame/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DactyloGame/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DactyloGame/MainApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DactyloGame/ModeInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DactyloGame/NormalMode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DactyloGame/Stats.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DactyloGame/Tampon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/Modele/AbstractModeClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/Modele/AbstractModeClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/VueFX/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/VueFX/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/VueFX/NormalModeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/VueFX/NormalModeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/DactyloGame-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/DactyloGame-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/com/game/dactylogame/NormalMode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/com/game/dactylogame/NormalMode.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/Modele/AbstractModeClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/Modele/AbstractModeClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/VueFX/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/VueFX/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/VueFX/NormalModeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/VueFX/NormalModeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/game/dactylogame/NormalMode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/game/dactylogame/NormalMode.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +71,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -136,7 +90,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2JRpZcDTbLdf8Gz6x6nykHEYF7v" />
   <component name="ProjectLevelVcsManager">
@@ -201,7 +155,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--debug" />
+        <option name="scriptParameters" value="--scan" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -235,6 +189,17 @@
       <updated>1672050808416</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DactyloGame$MainApp.ic" NAME="MainApp Coverage Results" MODIFIED="1672095540000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
