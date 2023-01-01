@@ -3,6 +3,6 @@ package com.game.dactylogame.Modele;
 /**
  *
  */
-public class GameMode extends ModeInterface {
+public class GameMode extends AbstractModeClass {
 
 }

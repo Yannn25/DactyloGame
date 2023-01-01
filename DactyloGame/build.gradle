@@ -10,6 +10,9 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven {
+        url 'https://oss.sonatype.org/content/repositories/snapshots/'
+    }
 }
 
 ext {
@@ -45,6 +48,7 @@ dependencies {
     implementation('com.github.almasb:fxgl:17.1') {
         exclude(group: 'org.openjfx')
     }
+    implementation('org.fxmisc.richtext:richtextfx:0.11.0')
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.game.dactylogame.VueFX.HomeController">
+   <children>
+      <ButtonBar layoutX="83.0" layoutY="182.0" prefHeight="40.0" prefWidth="200.0" />
+      <Button layoutX="215.0" layoutY="182.0" mnemonicParsing="false" onAction="#onNormalButtonClick" prefHeight="39.0" prefWidth="219.0" text="Mode Normal" />
+    <Button layoutX="218.0" layoutY="262.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" text="Mode Jeu" />
+    <Button layoutX="218.0" layoutY="339.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" text="Mode MultiJoueur" />
+      <Label alignment="CENTER" layoutX="147.0" layoutY="67.0" prefHeight="63.0" prefWidth="375.0" text="DACTYLOGAME" textFill="#1010db">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
