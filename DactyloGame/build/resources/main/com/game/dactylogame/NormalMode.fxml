@@ -4,14 +4,21 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.game.dactylogame.VueFX.NormalModeController">
    <children>
-      <Button alignment="CENTER" layoutX="714.0" layoutY="5.0" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="33.0" prefWidth="86.0" text="HOME" textFill="#ed0909">
+      <Button fx:id="HomeButton" alignment="CENTER" layoutX="714.0" layoutY="5.0" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="33.0" prefWidth="86.0" text="HOME" textFill="#ed0909">
          <font>
             <Font name="Arial Bold Italic" size="17.0" />
          </font>
       </Button>
-      <TextField alignment="TOP_LEFT" layoutX="57.0" layoutY="58.0" prefHeight="511.0" prefWidth="700.0" />
+      <TextField fx:id="TextF" alignment="TOP_LEFT" layoutX="276.0" layoutY="300.0" prefHeight="68.0" prefWidth="239.0" />
+      <Text fx:id="ZoneText" fill="#656565" fontSmoothingType="LCD" layoutX="103.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" READY TO START" textAlignment="CENTER" wrappingWidth="594.649694442749">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="StartButton" layoutX="348.0" layoutY="514.0" mnemonicParsing="false" onAction="#OnStartButton" text="START" />
    </children>
 </AnchorPane>
