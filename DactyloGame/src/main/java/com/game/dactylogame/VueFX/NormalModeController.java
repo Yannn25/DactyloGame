@@ -221,7 +221,8 @@ public class NormalModeController extends AbstractModeClass implements Initializ
         return res;
     }
 
-    private void colorerMots(){
+    private void colorerMots(){ // A FAIRE ! comment faire : sauvegarder position deb / position fin de mot
+                                //                           et appliquer la couleur avec richtextfx sur ces positions.
         String [] mots = arrMV();
         int i = 0;
         String str = null;
