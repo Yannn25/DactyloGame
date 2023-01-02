@@ -30,5 +30,11 @@
       <Text fx:id="Time" layoutX="183.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
       <Text fx:id="Vie" layoutX="122.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
       <Text fx:id="Niveau" layoutX="140.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+      <Text fx:id="test" layoutX="388.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+      <Text fx:id="testTextZone" layoutX="388.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
