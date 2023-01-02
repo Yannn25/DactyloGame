@@ -1,6 +1,7 @@
 package com.game.dactylogame.Modele;
 import java.io.IOException;
 import java.util.LinkedList;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.Timer;
 import org.fxmisc.richtext.*;
@@ -69,8 +70,14 @@ public abstract class AbstractModeClass {
     public void RemplirTampon() {
         int i = 0;
         Scanner scanner = new Scanner(getClass().getResourceAsStream("/com/game/dactylogame/ENListeMots.txt"));
-        while (scanner.hasNextLine() && i < 32 ) {
+        while (scanner.hasNextLine()) {
             tampon.getAllWords().add(scanner.nextLine());
+        }
+        Random ran = new Random();
+        int plage = ran.nextInt(45) + 32;
+        System.out.println(plage);
+        while(i < plage) {
+            tampon.getVisibleWords().add(tampon.getAllWords().get(ran.nextInt(0,tampon.getAllWords().size())));
             i++;
         }
         scanner.close();

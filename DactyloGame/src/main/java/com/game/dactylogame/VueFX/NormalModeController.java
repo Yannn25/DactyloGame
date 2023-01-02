@@ -1,9 +1,5 @@
 package com.game.dactylogame.VueFX;
 
-import org.fxmisc.richtext.*;
-import org.fxmisc.richtext.InlineCssTextArea;
-import javafx.fxml.Initializable;
-import javafx.scene.control.TextArea;
 import com.game.dactylogame.Modele.AbstractModeClass;
 import com.game.dactylogame.Modele.MotsVies;
 import com.game.dactylogame.Modele.NormalMode;
@@ -20,15 +16,15 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
-import java.net.URL;
-import java.util.*;
-
+import org.fxmisc.richtext.StyleClassedTextArea;
 
 import java.io.IOException;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Timer;
+import java.util.TimerTask;
 
-public class NormalModeController extends AbstractModeClass implements Initializable{
-
+public class NormalModeController {
 
     private Stage stage;
     private Scene scene;
@@ -45,33 +41,18 @@ public class NormalModeController extends AbstractModeClass implements Initializ
     @FXML
     private Button StartButton;
     @FXML
-    private Button HomeButton;
+    private Text Time;
     @FXML
     private Text ZoneText;
     @FXML
-    private Text Time;
-    @FXML
-    private Text Vie;
-    @FXML
-    private Text Niveau;
-    @FXML
     private Text test;
     @FXML
-    private Text testTextZone; //a enlever
-
     private int cptMots; //Compteur des mots
 
     private String tampon;
     private String motEnleve;
-    private boolean vieMotEnleve;
-    private int i = 0;
+    private AbstractModeClass game;
 
-    private NormalMode game;
-
-    public void run(){
-
-    }
-    //private Parent parent;
     @FXML
     private void onHomeButtonClick(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/com/game/dactylogame/HomeMenu.fxml"));
@@ -81,50 +62,6 @@ public class NormalModeController extends AbstractModeClass implements Initializ
         stage.show();
     }
 
-    /*remarque : changement du nom de la fonction : addOnTextF -> addOnZoneTextInit
-                 ce sont des mots initiaux quand on lance le jeu, on aura besoin d'ajouter plus de mots
-                 en jouant. c'est la raison pour laquelle j'ai change le nom.
-     */
-    private void addOnZoneTextInit() {
-       this.game = new NormalMode();
-       game.RemplirTampon();
-       String str = "";
-       for (cptMots = 0; cptMots < 15; cptMots++) {
-           str += game.getTampon().getAllWords().get(cptMots) + " ";
-       }
-       str.substring(0, str.length()-1);
-       ZoneText.setText(str);
-    }
-
-    private void addUnMot(){ //cas erreur a voir
-        String mot = game.getTampon().getAllWords().get(cptMots);
-        cptMots++;
-        Double r = Math.random();
-        boolean vie = (r <= 0.2) ? true : false;
-        MotsVies mv = new MotsVies(mot, vie);
-        listeMV.add(mv);
-        String str = ZoneText.getText() + " " + listeMV.getLast().getMot();
-        ZoneText.setText(str);
-    }
-
-
-    private void removeUnMot(){
-        MotsVies mv = listeMV.pop();
-        motEnleve = mv.getMot();
-        vieMotEnleve = mv.getVie();
-        System.out.println(vieMotEnleve);
-        String str = ZoneText.getText();
-        for(int i = 0; i < str.length(); i++){
-            if(str.charAt(i) == 32) {
-                str = str.substring(i + 1, str.length());
-                break;
-            }
-        }
-        ZoneText.setText(str);
-    }
-
-/*
-* compter et ajouter le temps au jeu (Text Time)*/
     private void addTime() {
 
         Timer timer = new Timer();
@@ -147,44 +84,48 @@ public class NormalModeController extends AbstractModeClass implements Initializ
         timer.schedule(task, 0, 1000);
     }
 
-    /*
-    * compter le temps double (format 0.0), verifier s'il est le temps d'ajouter un mot et l'ajouter.*/
-    private void addTimeUp() {
+    /**
+     *
+     */
+    private void addOnZoneTextInit() {
+        this.game = new NormalMode();
+        game.RemplirTampon();
+        String str = "";
+        for (cptMots = 0; cptMots < 15; cptMots++) {
+            str += game.getTampon().getVisibleWords().get(cptMots) + " ";
+        }
+        str.substring(0, str.length()-1);
+        ZoneText.setText(str);
+    }
 
-        Timer timer = new Timer();
-        TimerTask task = new TimerTask(){
-            @Override
-            public void run () {
-               timeCountUpDouble += 0.1;
-                testTextZone.setText(String.valueOf(Math.round(timeCountUpDouble*1000)/1000.0));
-                Double str = Double.valueOf(testTextZone.getText());
-                //testTextZone.setText(String.valueOf(timeCountUpDouble));
-               if(str == cptWordAddTime) {
-                   addUnMot();
-                   timeWord(timeCountUpInt);
-               }
+    /**
+     *
+     */
+    private void addUnMot(){ //cas erreur a voir
+        String mot = game.getTampon().getAllWords().get(cptMots);
+        cptMots++;
+        Double r = Math.random();
+        boolean vie = (r <= 0.2) ? true : false;
+        MotsVies mv = new MotsVies(mot, vie);
+        listeMV.add(mv);
+        String str = ZoneText.getText() + " " + listeMV.getLast().getMot();
+        ZoneText.setAccessibleText(str);
+    }
+    private void removeUnMot(){
+        MotsVies mv = listeMV.pop();
+        motEnleve = mv.getMot();
+        String str = ZoneText.getText();
+        for(int i = 0; i < str.length(); i++){
+            if(str.charAt(i) == 32) {
+                str = str.substring(i + 1, str.length());
+                break;
             }
-        } ;
-        timer.schedule(task, 0, 100);
+        }
+        ZoneText.setAccessibleText(str);
     }
-    /*
-    * calculer le temps a ajouter un mot et accumuler a cptWordAddTime */
-    private double timeWord(int time){ //a voir, le calcul n'est pas exact.
-        cptWordAddTime += Math.round(((3 * Math.pow(0.9, time))*10)/10.0);
-        //cptWordAddTime += (3 * Math.pow(0.9, time));
-        return cptWordAddTime;
-    }
-
-    private void addVie(){
-        Vie.setText(String.valueOf(stats.getVie()));
-    }
-
-    private void addNiveau(){
-        Niveau.setText(String.valueOf(stats.getNiveau()));
-    }
-
-    /*
-    * setListeMotsVies */
+    /**
+     *
+     */
     private void setListeMV(){
         listeMV = new LinkedList<>();
         while(!listeMots.isEmpty()) {
@@ -196,6 +137,10 @@ public class NormalModeController extends AbstractModeClass implements Initializ
         }
     }
 
+    /**
+     *
+     * @return
+     */
     private String[] arrMV(){
         String[] arr = new String[30];
         int i = 0;
@@ -210,6 +155,12 @@ public class NormalModeController extends AbstractModeClass implements Initializ
         return arr;
     }
 
+    /**
+     *
+     * @param mots
+     * @param s
+     * @return
+     */
     private boolean findMot(String [] mots, String s){
         boolean res = false;
         for(int i = 0; i < mots.length; i++){
@@ -221,39 +172,20 @@ public class NormalModeController extends AbstractModeClass implements Initializ
         return res;
     }
 
-    private void colorerMots(){ // A FAIRE ! comment faire : sauvegarder position deb / position fin de mot
-                                //                           et appliquer la couleur avec richtextfx sur ces positions.
-        String [] mots = arrMV();
-        int i = 0;
-        String str = null;
-        int ZoneTextLen = ZoneText.getText().length();
-        while(ZoneTextLen != i){
-            if(ZoneText.getText().charAt(i) == 32){
-                if(findMot(mots, str)){
-                   // ZoneText.setStyle(0, 10, "-fx-font-weight: bold;");
-                }
-
-            }else{
-                str += ZoneText.getText().charAt(i);
-            }
-        }
-    }
-
-
-    @FXML
-    private void OnStartButton(ActionEvent e) {
+    /**
+     *
+     * @param event
+     */
+    public void OnStartButton(ActionEvent event) {
         long start = System.currentTimeMillis();
 
         Thread thread = new Thread(() -> {
             String threadName = Thread.currentThread().getName();
             System.out.println(threadName);
             addOnZoneTextInit();
-            listeMots = parse(ZoneText.getText());
-            setListeMV();
+            listeMots = game.parse(ZoneText.getText());
             addTime();
-            addTimeUp();
-            addVie();
-            addNiveau();
+            setListeMV();
             //timeToAddWord();
             StartButton.setVisible(false);
             //HomeButton.setVisible(false);
@@ -261,35 +193,30 @@ public class NormalModeController extends AbstractModeClass implements Initializ
             TextF.setOnKeyTyped(new EventHandler<KeyEvent>() {
                 @Override
                 public void handle(KeyEvent event) {
+
                     String c = event.getCharacter();
                     test.setText(c);
                     if(c.charAt(0) == 32){ //Code ASCII de l'espace = 32
                         tampon = TextF.getText().substring(0,TextF.getText().length()-1);
+                       // colorerMots();
                         removeUnMot();
                         System.out.println(motEnleve);
-                        if(!tampon.equals(motEnleve)) {
-                            System.out.println(tampon);
-                            stats.setVie(stats.getVie() - 1);
-                            if(stats.getVie() == 0){
-                                timeCountDown = 0; // fin du jeu
-                            }
-                            addVie();
-                        }
-                        if(tampon.equals(motEnleve) && vieMotEnleve == true){
-                            stats.setVie(stats.getVie() + 1);
-                            addVie();
-                        }
                         TextF.clear();
                     }
                 }
             });
         });
-        thread.setName("Thread 1");
         thread.start();
+        //if (thread.isAlive()) {
+           // thread.stop();
+       // }
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) { //a voir!
-        ZoneText.setStyle("-fx-highlight-fill: #ADFF2F; -fx-highlight-text-fill: #B22222; -fx-font-size: 18px;");
+    @FXML
+    private void colorerMots(){
+
+       // ZoneText.setStyle(0,10, Collections.singleton("-fx-highlight-fill: red; -fx-highlight-text-fill: firebrick; -fx-font-size: 20px;"));
+
+
     }
 }

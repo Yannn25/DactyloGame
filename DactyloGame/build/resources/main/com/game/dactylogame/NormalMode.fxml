@@ -2,42 +2,33 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
-<?import javafx.scene.image.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
+<?import javafx.scene.text.*?>
 
-
-
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.game.dactylogame.VueFX.NormalModeController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.game.dactylogame.VueFX.NormalModeController">
    <children>
-      <Button fx:id="HomeButton" alignment="CENTER" layoutX="714.0" layoutY="5.0" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="33.0" prefWidth="86.0" text="HOME" textFill="#ed0909">
+      <Button fx:id="HomeButton" alignment="CENTER" layoutX="708.0" layoutY="7.0" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="33.0" prefWidth="86.0" text="HOME" textFill="#ed0909">
          <font>
             <Font name="Arial Bold Italic" size="17.0" />
          </font>
       </Button>
-      <TextField fx:id="TextF" alignment="TOP_CENTER" layoutX="278.0" layoutY="304.0" prefWidth="240.0" />
-      <Text fx:id="ZoneText" fill="#656565" fontSmoothingType="LCD" layoutX="103.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" READY TO START" textAlignment="CENTER" wrappingWidth="594.649694442749">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
-      <Button fx:id="StartButton" layoutX="348.0" layoutY="437.0" mnemonicParsing="false" onAction="#OnStartButton" text="START">
-         <font>
-            <Font size="26.0" />
-         </font></Button>
-      <Label layoutX="89.0" layoutY="75.0" text="Vie :" />
-      <Label layoutX="90.0" layoutY="98.0" text="Niveau :" />
-      <Label layoutX="88.0" layoutY="53.0" text="Temps restant :" />
-      <Text fx:id="Time" layoutX="183.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
-      <Text fx:id="Vie" layoutX="122.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
-      <Text fx:id="Niveau" layoutX="140.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
-      <Text fx:id="test" layoutX="388.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
-      <Text fx:id="testTextZone" layoutX="388.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <Text fx:id="testTextZone" layoutX="390.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
          <font>
             <Font size="31.0" />
          </font>
       </Text>
+      <Text fx:id="ZoneText" fill="#656565" fontSmoothingType="LCD" layoutX="113.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" READY TO START" textAlignment="CENTER" wrappingWidth="594.649694442749">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="test" layoutX="398.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+      <TextField fx:id="TextF" alignment="TOP_CENTER" layoutX="288.0" layoutY="314.0" prefWidth="240.0" />
+      <Button fx:id="StartButton" layoutX="358.0" layoutY="447.0" mnemonicParsing="false" onAction="#OnStartButton" text="START">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Button>
+      <Label layoutX="98.0" layoutY="63.0" text="Temps restant :" />
+      <Text fx:id="Time" layoutX="193.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
    </children>
 </AnchorPane>
