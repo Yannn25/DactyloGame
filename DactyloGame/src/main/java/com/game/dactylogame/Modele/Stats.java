@@ -11,6 +11,9 @@ public class Stats {
     private int Vitesse;
     private int Precision;
     private int Regularite;
+    private int Vie = 10;
+    private int Niveau = 1;
+    private int CptMotsSucces; //compter les mots succes
 
     // Getteurs et setteurs de notre classe
 
@@ -32,12 +35,22 @@ public class Stats {
     public void setRegularite(int Regularite) {
         this.Regularite = Regularite;
     }
-
+    public int getVie() { return Vie; }
+    public void setVie(int Vie){
+        this.Vie = Vie;
+    }
+    public int getNiveau(){ return Niveau; }
+    public void setNiveau(int Niveau) { this.Niveau = Niveau; }
+    public int getCptMotsSucces(){return CptMotsSucces; }
+    public void setCptMotsSucces(int CptMotsSucces){ this.CptMotsSucces = CptMotsSucces; }
 
     public Stats(int CharUtile, int chrono) {
         this.Vitesse = calculVitesse(CharUtile,chrono);
         this.Regularite = calculRegularite(CharUtile);
         this.Precision = calculPrecision(CharUtile);
+        this.Vie = getVie();
+        this.Niveau = getNiveau();
+        this.CptMotsSucces = getCptMotsSucces();
     }
 
     /**

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -13,12 +14,21 @@
             <Font name="Arial Bold Italic" size="17.0" />
          </font>
       </Button>
-      <TextField fx:id="TextF" alignment="TOP_LEFT" layoutX="276.0" layoutY="300.0" prefHeight="68.0" prefWidth="239.0" />
+      <TextField fx:id="TextF" alignment="TOP_CENTER" layoutX="278.0" layoutY="304.0" prefWidth="240.0" />
       <Text fx:id="ZoneText" fill="#656565" fontSmoothingType="LCD" layoutX="103.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" READY TO START" textAlignment="CENTER" wrappingWidth="594.649694442749">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <Button fx:id="StartButton" layoutX="348.0" layoutY="514.0" mnemonicParsing="false" onAction="#OnStartButton" text="START" />
+      <Button fx:id="StartButton" layoutX="348.0" layoutY="437.0" mnemonicParsing="false" onAction="#OnStartButton" text="START">
+         <font>
+            <Font size="26.0" />
+         </font></Button>
+      <Label layoutX="89.0" layoutY="75.0" text="Vie :" />
+      <Label layoutX="90.0" layoutY="98.0" text="Niveau :" />
+      <Label layoutX="88.0" layoutY="53.0" text="Temps restant :" />
+      <Text fx:id="Time" layoutX="183.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+      <Text fx:id="Vie" layoutX="122.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+      <Text fx:id="Niveau" layoutX="140.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
    </children>
 </AnchorPane>
