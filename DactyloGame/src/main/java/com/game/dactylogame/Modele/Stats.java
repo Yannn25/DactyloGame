@@ -1,6 +1,8 @@
 package com.game.dactylogame.Modele;
 
 
+import java.util.List;
+
 /**
  * Classe ou l'on retrouvera toute les statistiques qui concerne un Mode de Jeu
  */
@@ -9,48 +11,27 @@ public class Stats {
     // Nos champs qui compose un Objet de type Stats
 
     private int Vitesse;
-    private int Precision;
-    private int Regularite;
-    private int Vie = 10;
-    private int Niveau = 1;
-    private int CptMotsSucces; //compter les mots succes
+    private double Precision;
+    private double Regularite;
+
 
     // Getteurs et setteurs de notre classe
 
     public int getVitesse() {
         return Vitesse;
     }
-    public void setVitesse(int Vitesse) {
-        this.Vitesse = Vitesse;
-    }
-    public int getPrecision() {
+    public double getPrecision() {
         return Precision;
     }
-    public void setPrecision(int Precision) {
-        this.Precision = Precision;
-    }
-    public int getRegularite() {
+    public double getRegularite() {
         return Regularite;
     }
-    public void setRegularite(int Regularite) {
-        this.Regularite = Regularite;
-    }
-    public int getVie() { return Vie; }
-    public void setVie(int Vie){
-        this.Vie = Vie;
-    }
-    public int getNiveau(){ return Niveau; }
-    public void setNiveau(int Niveau) { this.Niveau = Niveau; }
-    public int getCptMotsSucces(){return CptMotsSucces; }
-    public void setCptMotsSucces(int CptMotsSucces){ this.CptMotsSucces = CptMotsSucces; }
 
-    public Stats(int CharUtile, int chrono) {
+
+    public Stats(int CharUtile, double chrono, int AllKeyPress, List<Long> ListReg) {
         this.Vitesse = calculVitesse(CharUtile,chrono);
-        this.Regularite = calculRegularite(CharUtile);
-        this.Precision = calculPrecision(CharUtile);
-        this.Vie = getVie();
-        this.Niveau = getNiveau();
-        this.CptMotsSucces = getCptMotsSucces();
+        this.Regularite = calculRegularite(CharUtile,ListReg);
+        this.Precision = calculPrecision(CharUtile,AllKeyPress);
     }
 
     /**
@@ -59,8 +40,8 @@ public class Stats {
      * @param chrono
      * @return
      */
-    private int calculVitesse(int CharUtile, int chrono) {
-        return (CharUtile/5) / chrono;
+    private int calculVitesse(int CharUtile, double chrono) {
+        return (int) ( (CharUtile/5) / chrono);
     }
 
     /**
@@ -68,8 +49,25 @@ public class Stats {
      * @param CharUtile
      * @return
      */
-    private int calculRegularite(int CharUtile) {
-        return 0;
+    private double calculRegularite(int CharUtile,List<Long> Reg ) {
+        if(Reg.isEmpty())
+            return 0;
+        long sum = 0;
+        double sumOfSquares = 0;
+        for (long x : Reg) {
+            sum += x;
+        }
+        double moy = (double) sum / Reg.size();
+        for ( long x: Reg ) {
+            double diff = Math.abs(x - moy);
+            sumOfSquares += diff * diff;
+        }
+
+        double variance = sumOfSquares / Reg.size();
+        double ecart = Math.sqrt(variance);
+        //System.out.println("SOMME des REG : "+sum+"\nMOY : "+moy+"\nSOMME au carré : "+sumOfSquares+
+            //    "\nVariances : "+variance+"\nECART : "+ ecart+"\nECART int : "+(int)ecart );
+        return  Math.round(ecart);
     }
 
     /**
@@ -77,8 +75,9 @@ public class Stats {
      * @param CharUtile
      * @return
      */
-    private int calculPrecision(int CharUtile) {
-        return 0;
+    private double calculPrecision(int CharUtile,int All_Key_Press) {
+        double copcu = (double) CharUtile * 1.0; double copakp =(double) All_Key_Press * 1.0;
+        return Math.round((copcu/copakp) * 100);
     }
 
 

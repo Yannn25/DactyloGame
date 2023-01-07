@@ -12,13 +12,52 @@ import org.fxmisc.richtext.*;
 public abstract class AbstractModeClass {
 
     private int KeyPress;
+    private int AllKeyPress;
     private  int time;//A Voir
-    private List<Integer> reg; //(Régularité)//A voir Egalement
+    private List<Long> reg; //(Régularité)//A voir Egalement
     private Tampon tampon;
 
     public AbstractModeClass() {
         this.KeyPress = 0;
         this.tampon = new Tampon();
+        this.reg = new LinkedList<>();
+    }
+
+
+
+
+    public int getKeyPress() { return KeyPress; }
+    public void addKeyPress(int keyPress) {
+        KeyPress += keyPress;
+    }
+    public int getAllKeyPress() { return AllKeyPress; }
+    public void addAllKeypress(int i) { this.AllKeyPress += i; }
+    public List<Long> getReg() {
+        return reg;
+    }
+    public Tampon getTampon() {
+        return tampon;
+    }
+
+    /**
+     *
+     */
+    public void RemplirTampon() {
+        int i = 0;
+        Scanner scanner = new Scanner(getClass().getResourceAsStream("/com/game/dactylogame/ENListeMots.txt"));
+        while (scanner.hasNextLine()) {
+            tampon.getAllWords().add(scanner.nextLine());
+        }
+        Random ran = new Random();
+        int plage = ran.nextInt(22) + 17;
+        System.out.println(plage);
+        while(i < plage) {
+            tampon.getVisibleWords().add(tampon.getAllWords().get(ran.nextInt(0,tampon.getAllWords().size())));
+            if(i < 15)
+                tampon.getFile().add(tampon.getVisibleWords().getLast());
+            i++;
+        }
+        scanner.close();
     }
 
     /**
@@ -42,45 +81,5 @@ public abstract class AbstractModeClass {
         }
         ret.add(str.substring(debM, finM));
         return ret;
-    }
-
-    public int getKeyPress() {
-        return KeyPress;
-    }
-    public void addKeyPress(int keyPress) {
-        KeyPress += keyPress;
-    }
-    public int getTime() {
-        return time;
-    }
-    public void setTime(int time) {
-        this.time = time;
-    }
-    public List<Integer> getReg() {
-        return reg;
-    }
-    public void setReg(List reg) {
-        this.reg = reg;
-    }
-    public Tampon getTampon() {
-        return tampon;
-    }
-
-    public void RemplirTampon() {
-        int i = 0;
-        Scanner scanner = new Scanner(getClass().getResourceAsStream("/com/game/dactylogame/ENListeMots.txt"));
-        while (scanner.hasNextLine()) {
-            tampon.getAllWords().add(scanner.nextLine());
-        }
-        Random ran = new Random();
-        int plage = ran.nextInt(22) + 17;
-        System.out.println(plage);
-        while(i < plage) {
-            tampon.getVisibleWords().add(tampon.getAllWords().get(ran.nextInt(0,tampon.getAllWords().size())));
-            if(i < 15)
-                tampon.getFile().add(tampon.getVisibleWords().getLast());
-            i++;
-        }
-        scanner.close();
     }
 }

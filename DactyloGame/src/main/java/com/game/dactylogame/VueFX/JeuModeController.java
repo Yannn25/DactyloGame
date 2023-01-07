@@ -1,10 +1,7 @@
 package com.game.dactylogame.VueFX;
 
- import com.game.dactylogame.Modele.NormalMode;
+ import com.game.dactylogame.Modele.*;
  import javafx.fxml.Initializable;
- import com.game.dactylogame.Modele.AbstractModeClass;
- import com.game.dactylogame.Modele.MotsVies;
- import com.game.dactylogame.Modele.Stats;
  import javafx.event.ActionEvent;
  import javafx.event.EventHandler;
  import javafx.fxml.FXML;
@@ -28,7 +25,6 @@ public class JeuModeController  {
 
     private Stage stage;
     private Scene scene;
-    private Stats stats = new Stats(1,1);;
     static int timeCountDown = 20; //temps restant. on aura pas besoin de le mettre a la tache finale.
     static int timeCountUpInt = 0; //temps passe int
     static double timeCountUpDouble = 0.0; //temps passe double
@@ -62,7 +58,7 @@ public class JeuModeController  {
     private boolean vieMotEnleve;
     private int i = 0;
 
-    private AbstractModeClass game;
+    private GameMode game;
 
     @FXML
     private void onHomeButtonClick(ActionEvent event) throws IOException {
@@ -78,7 +74,7 @@ public class JeuModeController  {
                  en jouant. c'est la raison pour laquelle j'ai change le nom.
      */
     private void addOnZoneTextInit() {
-        this.game = new NormalMode();
+        this.game = new GameMode();
         game.RemplirTampon();
         String str = "";
         for (cptMots = 0; cptMots < 15; cptMots++) {
@@ -172,11 +168,11 @@ public class JeuModeController  {
     }
 
     private void addVie(){
-        Vie.setText(String.valueOf(stats.getVie()));
+        Vie.setText(String.valueOf(game.getVie()));
     }
 
     private void addNiveau(){
-        Niveau.setText(String.valueOf(stats.getNiveau()));
+        Niveau.setText(String.valueOf(game.getNiveau()));
     }
 
     /*
@@ -241,8 +237,7 @@ public class JeuModeController  {
         long start = System.currentTimeMillis();
 
         Thread thread = new Thread(() -> {
-            String threadName = Thread.currentThread().getName();
-            System.out.println(threadName);
+            this.game = new GameMode();
             addOnZoneTextInit();
             listeMots = game.parse(ZoneText.getText());
             setListeMV();
@@ -265,14 +260,14 @@ public class JeuModeController  {
                         System.out.println(motEnleve);
                         if(!tampon.equals(motEnleve)) {
                             System.out.println(tampon);
-                            stats.setVie(stats.getVie() - 1);
-                            if(stats.getVie() == 0){
+                            game.setVie(game.getVie() - 1);
+                            if(game.getVie() == 0){
                                 timeCountDown = 0; // fin du jeu
                             }
                             addVie();
                         }
                         if(tampon.equals(motEnleve) && vieMotEnleve == true){
-                            stats.setVie(stats.getVie() + 1);
+                            game.setVie(game.getVie() + 1);
                             addVie();
                         }
                         TextF.clear();

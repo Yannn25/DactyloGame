@@ -1,37 +1,28 @@
 package com.game.dactylogame.VueFX;
 
-import com.almasb.fxgl.core.collection.grid.CellGenerator;
-import com.game.dactylogame.Modele.*;
-import javafx.application.Application;
+import com.game.dactylogame.Modele.AbstractModeClass;
+import com.game.dactylogame.Modele.NormalMode;
+import com.game.dactylogame.Modele.Stats;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
-import javafx.stage.Popup;
 import javafx.stage.Stage;
 
-import javafx.stage.WindowEvent;
-import org.fxmisc.richtext.StyleClassedTextArea;
-
 import java.io.IOException;
-import java.time.LocalTime;
-import java.util.LinkedList;
 import java.util.Timer;
 import java.util.TimerTask;
+
 
 
 public class NormalModeController  {
@@ -53,16 +44,14 @@ public class NormalModeController  {
     @FXML
     private Text ZoneText;
     @FXML
-    private Text test;
-    @FXML
-    private int cptMots; //Compteur des mots
+    private Text let;
     @FXML
     private Text infoZone; //a enlever
     private Stats stats;
-    static int timeCount; //temps restant. on aura pas besoin de le mettre a la tache finale.
+    static double timeCount = 0.0; //temps restant. on aura pas besoin de le mettre a la tache finale.
+    long startReg;
+    long endReg;
     static int Chrono = 10; //1minute pour Taper le Max de Mot
-    private String currentWord;
-    private String motEnleve;
     private AbstractModeClass game;
     private int curseur = 0;
 
@@ -89,6 +78,7 @@ public class NormalModeController  {
         if(ChronoOption.isSelected()) flag = true;
         Timer timer = new Timer();
         boolean finalFlag = flag;
+       // Instant startInstant = Instant.ofEpochMilli(startTime);
         TimerTask task = new TimerTask(){
             @Override
             public void run () {
@@ -102,10 +92,11 @@ public class NormalModeController  {
                             infoZone.setText("-");
                         }
                         Chrono--;
-                        timeCount++;
+                        timeCount+= 0.1 ;
                     } else {
                         timer.cancel();
                         ZoneText.setText("Ready to start Again");
+                        Time.setText("- : -");
                         TextF.clear();
                         TextF.setDisable(true);//desactiver le TextF avec le temps ecoule
                         HomeButton.setVisible(true);
@@ -113,27 +104,28 @@ public class NormalModeController  {
                         ChronoOption.setVisible(true);
                         //afficher les stats a partrir d'ici
                         System.out.println("Temps ecoule !\nnb de c taper : "+game.getKeyPress()+" tmp ecouler : "+timeCount);
-                        afficheStats(game.getKeyPress(),timeCount);
+                        afficheStats(timeCount);
                     }
                 } else {
                   //  System.out.println("-- " + timeCount + " ---");
-                    if (timeCount <= 300) {
-                        Time.setText("Temps écoule : " + String.valueOf(timeCount) + "s");
-                        if (timeCount == 60 || timeCount == 120 || timeCount == 180 || timeCount == 240 ||
-                        timeCount == 61 || timeCount == 121 || timeCount == 181 || timeCount == 241) {
+                    if (timeCount <= 5.0 || !verifywin()) {
+                        Time.setText("Temps écoule : " + String.valueOf(timeCount * 10) + "s");
+                        if (timeCount == 1.0 || timeCount == 2.0 || timeCount == 3.0 || timeCount == 4.0 ||
+                        timeCount == 1.1 || timeCount == 2.1 || timeCount == 3.1 || timeCount == 4.1) {
                             infoZone.setText("1min viens de s'écouler !");
                         }  else {
                             infoZone.setText("-");
                         }
-                        if (timeCount == 299) {
+                        if (timeCount == 4.9) {
                             infoZone.setText("Trop de temps écouler FIN DE JEU!!!");
                         }
                         //if(ZoneText.)
                         infoZone.setText("-");
-                        timeCount++;
+                        timeCount += 0.1;
                     } else {
                         timer.cancel();
                         ZoneText.setText("Ready to start Again");
+                        Time.setText("- : -");
                         TextF.clear();
                         TextF.setDisable(true);//desactiver le TextF avec le temps ecoule
                         HomeButton.setVisible(true);
@@ -141,7 +133,7 @@ public class NormalModeController  {
                         ChronoOption.setVisible(true);
                         //afficher les stats a partrir d'ici
                         System.out.println("Temps ecoule !");
-                        afficheStats(game.getKeyPress(),timeCount);
+                        afficheStats(timeCount);
                     }
                 }
             }
@@ -168,7 +160,7 @@ public class NormalModeController  {
 
     private void VisibleMaj() {
         for(int i = 0; i < 15; i++) {
-            System.out.println(game.getTampon().getVisibleWords().removeFirst());
+            game.getTampon().getVisibleWords().removeFirst();
         }
     }
 
@@ -179,8 +171,6 @@ public class NormalModeController  {
         }
         if(str.length() > 0)
             str.substring(0, str.length()-1);
-        else
-            //win donc methode a faire
         ZoneText.setText(str);
     }
 
@@ -190,7 +180,7 @@ public class NormalModeController  {
      */
     @FXML
     public void OnStartButton(ActionEvent event) {
-        //long start = System.currentTimeMillis();
+        startReg = System.currentTimeMillis();
 
         Thread thread = new Thread(() -> {
             this.game = new NormalMode();
@@ -204,25 +194,28 @@ public class NormalModeController  {
             TextF.setDisable(false);
             StatsButton.setVisible(false);
 
-            // long end = System.currentTimeMillis();
             TextF.setOnKeyTyped(new EventHandler<KeyEvent>() {
                 @Override
                 public void handle(KeyEvent event) {
                     String c = event.getCharacter();
-                    if(c.charAt(0) != 127)//gestion de 'delete' qui retire -1
+                    game.addAllKeypress(1);
+                    if(c.charAt(0) != 8) { //gestion de 'delete' qui retire -1
                         game.addKeyPress(1);
-                    else
+                        endReg = System.currentTimeMillis();
+                        game.getReg().add((endReg-startReg));
+                        startReg = endReg;
+                    } else {
                         game.addKeyPress(-1);
-                    test.setText(c);
+                    }
+                    let.setText(c);
                     if (c.charAt(0) == 32) { //Code ASCII de l'espace = 32
-                        currentWord = TextF.getText().substring(0, TextF.getText().length() - 1);
+                        //currentWord = TextF.getText().substring(0, TextF.getText().length() - 1);
                         game.getTampon().getFile().removeFirst();
                         if(!game.getTampon().getVisibleWords().isEmpty())
                             game.getTampon().getFile().addLast(game.getTampon().getVisibleWords().removeFirst());
                         TamponMaj();
                         //colorerChar(true);
                         curseur = 0;
-                        //System.out.println(motEnleve);
                         TextF.clear();
                     }
                     /*if(c.equals(game.getTampon().getVisibleWords().get(0).charAt(curseur)))
@@ -260,12 +253,11 @@ public class NormalModeController  {
     /**
      *  Méthode qui nous permet d'instancier notre attribut stats,
      *  puis va rendre possible la visualitation des stats.
-     * @param key_Press > le nombre char utile
      * @param time_Count > le temps pris par le player
      */
     @FXML
-    private void afficheStats(int key_Press, int time_Count) {
-        this.stats = new Stats(key_Press,time_Count);
+    private void afficheStats(double time_Count) {
+        this.stats = new Stats(game.getKeyPress(),time_Count,game.getAllKeyPress(),game.getReg());
         StatsButton.setVisible(true);
     }
 
@@ -277,10 +269,17 @@ public class NormalModeController  {
     public void StatsButton(ActionEvent e) {
         Alert pop = new Alert(Alert.AlertType.INFORMATION);
         Platform.runLater(() -> {
-            pop.setHeaderText("Vitesse (MPM): "+stats.getVitesse()+"\nRégularité : "+stats.getRegularite()+"\nPrécison : "+stats.getPrecision());
+            pop.setHeaderText("Vitesse (MPM): "+stats.getVitesse()+"\nRégularité : "+stats.getRegularite()+"%\nPrécison : "+stats.getPrecision()+"%");
             pop.setHeight(400);pop.setWidth(400);
         });
         pop.showAndWait();
+    }
+
+    /**
+     * @return Vrai si plus aucun mot contenu dans la file
+     */
+    private boolean verifywin(){
+        return game.getTampon().getFile().isEmpty();
     }
 
   // A gérer la fin du thread sur une fermeture de la fenetre
