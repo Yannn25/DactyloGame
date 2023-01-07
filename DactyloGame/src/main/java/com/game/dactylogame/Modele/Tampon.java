@@ -9,21 +9,33 @@ public class Tampon {
     private LinkedList<String> AllWords;
     private LinkedList<String> VisibleWords;
 
+    private LinkedList<String> File;
+
     public Tampon() {
         this.AllWords = new LinkedList<>();
         this.VisibleWords = new LinkedList<>();
+        this.File = new LinkedList<>();
     }
-
+    /**
+     * Getteur
+     * @return this.AllWords
+     */
     public LinkedList<String> getAllWords() {
         return AllWords;
     }
-    public void setAllWords(LinkedList<String> allWords) {
-        AllWords = allWords;
-    }
+
+    /**
+     * Getteur
+     * @return this.VisibleWords
+     */
     public LinkedList<String> getVisibleWords() {
         return VisibleWords;
     }
-    public void setVisibleWords(LinkedList<String> visibleWords) {
-        VisibleWords = visibleWords;
-    }
+
+    /**
+     * Getteur
+     * @return > this.File
+     */
+    public LinkedList<String> getFile() { return File; }
+
 }

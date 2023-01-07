@@ -17,11 +17,13 @@ package com.game.dactylogame.VueFX;
  import javafx.scene.input.KeyEvent;
  import javafx.scene.text.Text;
  import javafx.stage.Stage;
+ import org.fxmisc.richtext.InlineCssTextArea;
+
  import java.net.URL;
  import java.util.*;
  import java.io.IOException;
 
-public class JeuModeController extends AbstractModeClass implements Initializable {
+public class JeuModeController  {
 
 
     private Stage stage;
@@ -87,7 +89,7 @@ public class JeuModeController extends AbstractModeClass implements Initializabl
     }
 
     private void addUnMot(){ //cas erreur a voir
-        String mot = game.getTampon().getAllWords().get(cptMots);
+        String mot = game.getTampon().getVisibleWords().get(cptMots);
         cptMots++;
         Double r = Math.random();
         boolean vie = (r <= 0.2) ? true : false;
@@ -136,6 +138,7 @@ public class JeuModeController extends AbstractModeClass implements Initializabl
             }
         } ;
         timer.schedule(task, 0, 1000);
+        timeCountDown = 20; timeCountUpInt = 0;
     }
 
     /**
@@ -158,6 +161,7 @@ public class JeuModeController extends AbstractModeClass implements Initializabl
             }
         } ;
         timer.schedule(task, 0, 100);
+        timeCountUpDouble = 0.0;
     }
     /*
      * calculer le temps a ajouter un mot et accumuler a cptWordAddTime */
@@ -240,7 +244,7 @@ public class JeuModeController extends AbstractModeClass implements Initializabl
             String threadName = Thread.currentThread().getName();
             System.out.println(threadName);
             addOnZoneTextInit();
-            listeMots = parse(ZoneText.getText());
+            listeMots = game.parse(ZoneText.getText());
             setListeMV();
             addTime();
             addTimeUp();
@@ -280,9 +284,6 @@ public class JeuModeController extends AbstractModeClass implements Initializabl
         thread.start();
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) { //a voir!
-        ZoneText.setStyle("-fx-highlight-fill: #ADFF2F; -fx-highlight-text-fill: #B22222; -fx-font-size: 18px;");
-    }
+
 }
 

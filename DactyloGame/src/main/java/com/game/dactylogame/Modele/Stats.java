@@ -60,7 +60,7 @@ public class Stats {
      * @return
      */
     private int calculVitesse(int CharUtile, int chrono) {
-        return (CharUtile/chrono) / 5;
+        return (CharUtile/5) / chrono;
     }
 
     /**

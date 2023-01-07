@@ -1,9 +1,7 @@
 package com.game.dactylogame.Modele;
 import java.io.IOException;
-import java.util.LinkedList;
-import java.util.Random;
-import java.util.Scanner;
-import java.util.Timer;
+import java.util.*;
+
 import org.fxmisc.richtext.*;
 
 
@@ -14,11 +12,12 @@ import org.fxmisc.richtext.*;
 public abstract class AbstractModeClass {
 
     private int KeyPress;
-    private  Timer time;
-    private  Timer reg; //(Régularité)
+    private  int time;//A Voir
+    private List<Integer> reg; //(Régularité)//A voir Egalement
     private Tampon tampon;
 
     public AbstractModeClass() {
+        this.KeyPress = 0;
         this.tampon = new Tampon();
     }
 
@@ -48,19 +47,19 @@ public abstract class AbstractModeClass {
     public int getKeyPress() {
         return KeyPress;
     }
-    public void setKeyPress(int keyPress) {
-        KeyPress = keyPress;
+    public void addKeyPress(int keyPress) {
+        KeyPress += keyPress;
     }
-    public Timer getTime() {
+    public int getTime() {
         return time;
     }
-    public void setTime(Timer time) {
+    public void setTime(int time) {
         this.time = time;
     }
-    public Timer getReg() {
+    public List<Integer> getReg() {
         return reg;
     }
-    public void setReg(Timer reg) {
+    public void setReg(List reg) {
         this.reg = reg;
     }
     public Tampon getTampon() {
@@ -74,10 +73,12 @@ public abstract class AbstractModeClass {
             tampon.getAllWords().add(scanner.nextLine());
         }
         Random ran = new Random();
-        int plage = ran.nextInt(45) + 32;
+        int plage = ran.nextInt(22) + 17;
         System.out.println(plage);
         while(i < plage) {
             tampon.getVisibleWords().add(tampon.getAllWords().get(ran.nextInt(0,tampon.getAllWords().size())));
+            if(i < 15)
+                tampon.getFile().add(tampon.getVisibleWords().getLast());
             i++;
         }
         scanner.close();

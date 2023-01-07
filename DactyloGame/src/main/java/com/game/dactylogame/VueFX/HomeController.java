@@ -7,10 +7,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import org.fxmisc.richtext.StyleClassedTextArea;
 
 import java.io.IOException;
 
+/**
+ * Controller qui affiche les options de mode de Jeu
+ */
 public class HomeController {
     private Stage stage;
     private Scene scene;
@@ -22,6 +28,10 @@ public class HomeController {
         scene = new Scene(root,800,600);
         stage.setScene(scene);
         stage.show();
+
+        //On cache dès le départ notre bouton de Stats
+        Button button = (Button) scene.lookup("#StatsButton");
+        button.setVisible(false);
     }
 
     @FXML
