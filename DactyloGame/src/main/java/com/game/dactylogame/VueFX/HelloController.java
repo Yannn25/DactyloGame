@@ -10,12 +10,19 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * First Page of Welcome
+ */
 public class HelloController {
     private Stage stage;
     private Scene scene;
     //private Parent parent;
 
-
+    /**
+     * Load second Page
+     * @param event >
+     * @throws IOException >
+     */
     @FXML
     private void onHelloButtonClick(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/com/game/dactylogame/HomeMenu.fxml"));

@@ -1,6 +1,5 @@
 package com.game.dactylogame.VueFX;
 
-import com.game.dactylogame.Modele.NormalMode;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,9 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import org.fxmisc.richtext.StyleClassedTextArea;
 
 import java.io.IOException;
 
@@ -41,5 +38,8 @@ public class HomeController {
         scene = new Scene(root,800,600);
         stage.setScene(scene);
         stage.show();
+
+        Button button = (Button) scene.lookup("#StatsButton");
+        button.setVisible(false);
     }
 }

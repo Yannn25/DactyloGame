@@ -17,39 +17,54 @@ public class Stats {
 
     // Getteurs et setteurs de notre classe
 
-    public int getVitesse() {
-        return Vitesse;
-    }
-    public double getPrecision() {
-        return Precision;
-    }
-    public double getRegularite() {
-        return Regularite;
-    }
+    /**
+     * Getteur
+     * @return  la vitesse
+     */
+    public int getVitesse() { return Vitesse; }
 
+    /**
+     * Getteur
+     * @return  La précision
+     */
+    public double getPrecision() { return Precision; }
 
+    /**
+     * La régularité
+     * @return  la régularité entre chaque frappe saisie
+     */
+    public double getRegularite() { return Regularite; }
+
+    /**
+     * Constructeur
+     * @param CharUtile > caractere utile
+     * @param chrono > le temps en minute
+     * @param AllKeyPress > nombre total de mot taper
+     * @param ListReg > Liste contenant le temp de chaque frappe de clavier
+     */
     public Stats(int CharUtile, double chrono, int AllKeyPress, List<Long> ListReg) {
         this.Vitesse = calculVitesse(CharUtile,chrono);
-        this.Regularite = calculRegularite(CharUtile,ListReg);
+        this.Regularite = calculRegularite(ListReg);
         this.Precision = calculPrecision(CharUtile,AllKeyPress);
     }
 
     /**
-     *
-     * @param CharUtile
-     * @param chrono
-     * @return
+     * Calcul de la vitesse (mot par minute)
+     * @param CharUtile > caractères utiles
+     * @param chrono > temps en minute
+     * @return  le nombre de caractères utiles, divisé par le temps en minute, divisé encore
+     * par 5 (ici, on considère par convention qu’un mot fait en moyenne 5 caractères).
      */
     private int calculVitesse(int CharUtile, double chrono) {
-        return (int) ( (CharUtile/5) / chrono);
+        return (int) ( (CharUtile/5) / (chrono * 60));
     }
 
     /**
-     *
-     * @param CharUtile
-     * @return
+     * calcul de la régularité
+     * @param Reg > Liste contenant le temp de chaque frappe de clavier
+     * @return  l’écart-type de la durée entre 2 caractères utiles consécutifs.
      */
-    private double calculRegularite(int CharUtile,List<Long> Reg ) {
+    private double calculRegularite(List<Long> Reg ) {
         if(Reg.isEmpty())
             return 0;
         long sum = 0;
@@ -71,9 +86,9 @@ public class Stats {
     }
 
     /**
-     *
-     * @param CharUtile
-     * @return
+     * calcul de la précision
+     * @param CharUtile > caractères utiles
+     * @return  le nombre de caractères utiles divisé par le nombre d’appuis de touche (×100)
      */
     private double calculPrecision(int CharUtile,int All_Key_Press) {
         double copcu = (double) CharUtile * 1.0; double copakp =(double) All_Key_Press * 1.0;

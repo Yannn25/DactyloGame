@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80adedc5-d1ea-4fda-9a79-a5ec879a7e0f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -14,14 +15,35 @@
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/Modele/AbstractModeClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/Modele/AbstractModeClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/Modele/GameMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/Modele/GameMode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/Modele/Stats.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/Modele/Stats.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/Modele/Tampon.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/Modele/Tampon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/VueFX/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/VueFX/HelloController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/VueFX/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/VueFX/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/VueFX/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/VueFX/MainApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/VueFX/NormalModeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/game/dactylogame/VueFX/NormalModeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com.game.dactylogame/com/game/dactylogame/Modele/GameMode.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com.game.dactylogame/com/game/dactylogame/Modele/GameMode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com.game.dactylogame/com/game/dactylogame/Modele/NormalMode.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com.game.dactylogame/com/game/dactylogame/Modele/NormalMode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/com.game.dactylogame/com/game/dactylogame/Modele/Stats.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/com.game.dactylogame/com/game/dactylogame/Modele/Stats.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/index-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/index-all.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/javadoc/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/javadoc/member-search-index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/DactyloGame-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/DactyloGame-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/com/game/dactylogame/NormalMode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/com/game/dactylogame/NormalMode.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/Modele/AbstractModeClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/Modele/AbstractModeClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/Modele/GameMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/Modele/GameMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/Modele/MotsVies.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/Modele/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/Modele/Stats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/Modele/Tampon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/Modele/Tampon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/VueFX/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/VueFX/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/VueFX/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/VueFX/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/VueFX/JeuModeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/VueFX/JeuModeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/VueFX/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/VueFX/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/VueFX/NormalModeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/dactylogame/VueFX/NormalModeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/game/dactylogame/JeuMode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/game/dactylogame/JeuMode.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/game/dactylogame/NormalMode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/game/dactylogame/NormalMode.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demos/demos/.gradle/nb-cache/subprojects.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../demos/demos/.gradle/nb-cache/subprojects.ser" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,19 +109,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/yann9/Cours/2022/CPO5/Projet/projetcpoo5-im-edikeu/demos/demos"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/yann9/Cours/2022/CPO5/Projet/projetcpoo5-im-edikeu/demos/demos&quot;
   }
-}]]></component>
+}</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="gradle run" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.DactyloGame [run]">
+  <component name="RunManager" selected="Gradle.DactyloGame [javadoc]">
     <configuration name="DactyloGame [javadoc]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -144,8 +166,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.DactyloGame [run]" />
         <item itemvalue="Gradle.DactyloGame [javadoc]" />
+        <item itemvalue="Gradle.DactyloGame [run]" />
       </list>
     </recent_temporary>
   </component>
@@ -174,27 +196,28 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
+        <breakpoint type="java-exception">
           <properties class="java.lang.IllegalStateException" package="java.lang" />
           <option name="timeStamp" value="8" />
         </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
+        <breakpoint type="java-exception">
           <properties class="java.lang.StringIndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="9" />
         </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.NoSuchElementException" package="java.util" />
+          <option name="timeStamp" value="19" />
+        </breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="java-exception" />
+      </default-breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="GradleRunConfiguration">
-        <watch expression="run()" language="JAVA" />
-        <watch expression="run()" language="JAVA" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DactyloGame$MainApp.ic" NAME="MainApp Coverage Results" MODIFIED="1672095540000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.game.dactylogame.VueFX.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/DactyloGame$DactyloGame__run_.ic" NAME="DactyloGame [run] Coverage Results" MODIFIED="1673054310969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/DactyloGame$DactyloGame__run_.ic" NAME="DactyloGame [run] Coverage Results" MODIFIED="1673175584307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

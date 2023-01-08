@@ -2,7 +2,6 @@ package com.game.dactylogame.Modele;
 import java.io.IOException;
 import java.util.*;
 
-import org.fxmisc.richtext.*;
 
 
 /**
@@ -11,12 +10,26 @@ import org.fxmisc.richtext.*;
  */
 public abstract class AbstractModeClass {
 
-    private int KeyPress;
-    private int AllKeyPress;
-    private  int time;//A Voir
-    private List<Long> reg; //(Régularité)//A voir Egalement
-    private Tampon tampon;
+    /**
+     * Le nombre de caractère utile
+     */
+    protected int KeyPress;
+    /**
+     * Le nombre de touche total(y compris les backspaces)
+     */
+    protected int AllKeyPress;
+    /**
+     * Liste contenant le temps a chaque char utile presser
+      */
+    protected List<Long> reg;
+    /**
+     * Tampon
+     */
+    protected Tampon tampon;
 
+    /**
+     * Constructeur
+     */
     public AbstractModeClass() {
         this.KeyPress = 0;
         this.tampon = new Tampon();
@@ -24,23 +37,50 @@ public abstract class AbstractModeClass {
     }
 
 
-
-
+    /**
+     * Getteur
+     * @return >
+     */
     public int getKeyPress() { return KeyPress; }
+
+    /**
+     * Incrémentation des Key Press
+     * @param keyPress > touche presser(char utile)
+     */
     public void addKeyPress(int keyPress) {
         KeyPress += keyPress;
     }
+
+    /**
+     * Getteur
+     * @return >
+     */
     public int getAllKeyPress() { return AllKeyPress; }
+
+    /**
+     * Incrementation de KeyPress
+     * @param i > int
+     */
     public void addAllKeypress(int i) { this.AllKeyPress += i; }
+
+    /**
+     * Getteur
+     * @return >
+     */
     public List<Long> getReg() {
         return reg;
     }
+
+    /**
+     * Getteur
+     * @return >
+     */
     public Tampon getTampon() {
         return tampon;
     }
 
     /**
-     *
+     * Chargement des mots
      */
     public void RemplirTampon() {
         int i = 0;
@@ -49,10 +89,9 @@ public abstract class AbstractModeClass {
             tampon.getAllWords().add(scanner.nextLine());
         }
         Random ran = new Random();
-        int plage = ran.nextInt(22) + 17;
-        System.out.println(plage);
+        int plage = ran.nextInt(25 - 17 + 1) + 17;
         while(i < plage) {
-            tampon.getVisibleWords().add(tampon.getAllWords().get(ran.nextInt(0,tampon.getAllWords().size())));
+            tampon.getVisibleWords().add(tampon.getAllWords().get(ran.nextInt(1,tampon.getAllWords().size())));
             if(i < 15)
                 tampon.getFile().add(tampon.getVisibleWords().getLast());
             i++;
@@ -60,26 +99,5 @@ public abstract class AbstractModeClass {
         scanner.close();
     }
 
-    /**
-     *
-     * @param str un texte
-     * @return une Liste chaine contenant tous les mots compris dans str
-     */
-    public static LinkedList<String> parse(String str) {
-        LinkedList<String> ret = new LinkedList<String>();
-        int i = 0, debM = 0, finM = 0;
-        while(i < str.length() && finM < str.length()) {
-            if(str.charAt(finM) == ' '){
-                ret.add(str.substring(debM, finM));
-                finM++;
-                debM = finM;
-                i++;
-            } else {
-                finM++;
-                i++;
-            }
-        }
-        ret.add(str.substring(debM, finM));
-        return ret;
-    }
+
 }

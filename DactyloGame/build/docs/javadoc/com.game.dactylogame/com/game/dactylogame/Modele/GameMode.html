@@ -15,7 +15,11 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
-<script type="text/javascript">var pathtoroot = "../../../../../";
+<script type="text/javascript">var evenRowColor = "even-row-color";
+var oddRowColor = "odd-row-color";
+var tableTab = "table-tab";
+var activeTableTab = "active-table-tab";
+var pathtoroot = "../../../../../";
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -40,15 +44,15 @@ loadScripts(document, 'script');</script>
 <ul class="sub-nav-list">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field-summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor-summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method-summary">Method</a></li>
 </ul>
 <ul class="sub-nav-list">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field-detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor-detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method-detail">Method</a></li>
 </ul>
 </div>
 <div class="nav-list-search"><label for="search-input">SEARCH:</label>
@@ -79,6 +83,26 @@ loadScripts(document, 'script');</script>
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- =========== FIELD SUMMARY =========== -->
+<li>
+<section class="field-summary" id="field-summary">
+<h2>Field Summary</h2>
+<div class="caption"><span>Fields</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Field</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>protected <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashMap.html" title="class or interface in java.util" class="external-link">HashMap</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;</code></div>
+<div class="col-second even-row-color"><code><a href="#listeMV" class="member-name-link">listeMV</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">Hashmap de mot qui peuvent redonner de la vie</div>
+</div>
+</div>
+<div class="inherited-list">
+<h3 id="fields-inherited-from-class-com.game.dactylogame.Modele.AbstractModeClass">Fields inherited from class&nbsp;com.game.dactylogame.Modele.<a href="AbstractModeClass.html" title="class in com.game.dactylogame.Modele">AbstractModeClass</a></h3>
+<code><a href="AbstractModeClass.html#AllKeyPress">AllKeyPress</a>, <a href="AbstractModeClass.html#KeyPress">KeyPress</a>, <a href="AbstractModeClass.html#reg">reg</a>, <a href="AbstractModeClass.html#tampon">tampon</a></code></div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li>
 <section class="constructor-summary" id="constructor-summary">
@@ -88,7 +112,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">GameMode</a>()</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Constructeur</div>
+</div>
 </div>
 </section>
 </li>
@@ -96,9 +122,69 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
+<div id="method-summary-table">
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div id="method-summary-table.tabpanel" role="tabpanel">
+<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Method</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCptMotsSucces()" class="member-name-link">getCptMotsSucces</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Getteur</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCurrentWord()" class="member-name-link">getCurrentWord</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Getteur</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashMap.html" title="class or interface in java.util" class="external-link">HashMap</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getlisteMV()" class="member-name-link">getlisteMV</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Getteur</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNiveau()" class="member-name-link">getNiveau</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Getteur</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVie()" class="member-name-link">getVie</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Getteur</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#RemplirTamponJeu()" class="member-name-link">RemplirTamponJeu</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Chargement des mots dans le mode Jeu</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCptMotsSucces(int)" class="member-name-link">setCptMotsSucces</a><wbr>(int&nbsp;CptMotsSucces)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Setteur</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCurrentWord(java.lang.String)" class="member-name-link">setCurrentWord</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;currentWord)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Setteur</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNiveau(int)" class="member-name-link">setNiveau</a><wbr>(int&nbsp;Niveau)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Setteur</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVie(int)" class="member-name-link">setVie</a><wbr>(int&nbsp;Vie)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Setteur</div>
+</div>
+</div>
+</div>
+</div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.game.dactylogame.Modele.AbstractModeClass">Methods inherited from class&nbsp;com.game.dactylogame.Modele.<a href="AbstractModeClass.html" title="class in com.game.dactylogame.Modele">AbstractModeClass</a></h3>
-<code><a href="AbstractModeClass.html#addKeyPress(int)">addKeyPress</a>, <a href="AbstractModeClass.html#getKeyPress()">getKeyPress</a>, <a href="AbstractModeClass.html#getReg()">getReg</a>, <a href="AbstractModeClass.html#getTampon()">getTampon</a>, <a href="AbstractModeClass.html#getTime()">getTime</a>, <a href="AbstractModeClass.html#parse(java.lang.String)">parse</a>, <a href="AbstractModeClass.html#RemplirTampon()">RemplirTampon</a>, <a href="AbstractModeClass.html#setReg(java.util.List)">setReg</a>, <a href="AbstractModeClass.html#setTime(int)">setTime</a></code></div>
+<code><a href="AbstractModeClass.html#addAllKeypress(int)">addAllKeypress</a>, <a href="AbstractModeClass.html#addKeyPress(int)">addKeyPress</a>, <a href="AbstractModeClass.html#getAllKeyPress()">getAllKeyPress</a>, <a href="AbstractModeClass.html#getKeyPress()">getKeyPress</a>, <a href="AbstractModeClass.html#getReg()">getReg</a>, <a href="AbstractModeClass.html#getTampon()">getTampon</a>, <a href="AbstractModeClass.html#RemplirTampon()">RemplirTampon</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -108,6 +194,21 @@ loadScripts(document, 'script');</script>
 </section>
 <section class="details">
 <ul class="details-list">
+<!-- ============ FIELD DETAIL =========== -->
+<li>
+<section class="field-details" id="field-detail">
+<h2>Field Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="listeMV">
+<h3>listeMV</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashMap.html" title="class or interface in java.util" class="external-link">HashMap</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;</span>&nbsp;<span class="element-name">listeMV</span></div>
+<div class="block">Hashmap de mot qui peuvent redonner de la vie</div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li>
 <section class="constructor-details" id="constructor-detail">
@@ -117,6 +218,121 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;()">
 <h3>GameMode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">GameMode</span>()</div>
+<div class="block">Constructeur</div>
+</section>
+</li>
+</ul>
+</section>
+</li>
+<!-- ============ METHOD DETAIL ========== -->
+<li>
+<section class="method-details" id="method-detail">
+<h2>Method Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="getVie()">
+<h3>getVie</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getVie</span>()</div>
+<div class="block">Getteur</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>> vie</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setVie(int)">
+<h3>setVie</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVie</span><wbr><span class="parameters">(int&nbsp;Vie)</span></div>
+<div class="block">Setteur</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>Vie</code> - > modifier la vie</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getNiveau()">
+<h3>getNiveau</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getNiveau</span>()</div>
+<div class="block">Getteur</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>> niveau</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setNiveau(int)">
+<h3>setNiveau</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setNiveau</span><wbr><span class="parameters">(int&nbsp;Niveau)</span></div>
+<div class="block">Setteur</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>Niveau</code> - > modifier le niveau</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCptMotsSucces()">
+<h3>getCptMotsSucces</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getCptMotsSucces</span>()</div>
+<div class="block">Getteur</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>> le nombre de mot valide</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setCptMotsSucces(int)">
+<h3>setCptMotsSucces</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCptMotsSucces</span><wbr><span class="parameters">(int&nbsp;CptMotsSucces)</span></div>
+<div class="block">Setteur</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>CptMotsSucces</code> - > mot correctement taper</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCurrentWord()">
+<h3>getCurrentWord</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCurrentWord</span>()</div>
+<div class="block">Getteur</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>le mot courant</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setCurrentWord(java.lang.String)">
+<h3>setCurrentWord</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCurrentWord</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;currentWord)</span></div>
+<div class="block">Setteur</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>currentWord</code> - > mot courant</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getlisteMV()">
+<h3>getlisteMV</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashMap.html" title="class or interface in java.util" class="external-link">HashMap</a></span>&nbsp;<span class="element-name">getlisteMV</span>()</div>
+<div class="block">Getteur</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>liste des Mot ajoutant de la vie</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="RemplirTamponJeu()">
+<h3>RemplirTamponJeu</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">RemplirTamponJeu</span>()</div>
+<div class="block">Chargement des mots dans le mode Jeu</div>
 </section>
 </li>
 </ul>
